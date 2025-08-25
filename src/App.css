@@ -1,3 +1,12 @@
+/* Make sure the page fills full height */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background: #1a202c; /* Dark background */
+  display: flex;
+  flex-direction: column;
+}
+
 /* ========== HEADER STYLES ========== */
 header {
   height: 50px;
@@ -18,8 +27,7 @@ footer {
 
 /* ========== MAIN SECTION STYLES ========== */
 section {
-  height: calc(100% - 100px);
-  width: calc(100% - 20px);
+  flex: 1; /* Take remaining height between header & footer */
   overflow: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Always 4 columns on desktop */
